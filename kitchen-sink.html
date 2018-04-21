@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="http://ace.c9.io/demo/kitchen-sink/styles.css" type="text/css" media="screen" charset="utf-8">
     <script async="true" src="https://use.edgefonts.net/source-code-pro.js"></script>
 
-    <link rel="import" href="juicy-ace-editor.html">
+    <script type="module" src="./juicy-ace-editor.js"></script>
 </head>
 <body>
 <template is="dom-bind">
@@ -301,7 +301,8 @@
 </script>
 
 
-<script type="text/javascript">
+<script type="module">
+import './juicy-ace-editor.js';
 var domBind = document.querySelector("template")
 domBind.softtabs= true;
 domBind.mode= "ace/mode/html";

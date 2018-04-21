@@ -12,7 +12,7 @@
     <script src="../../document-register-element/build/document-register-element.js"></script>
     <script src="../../web-component-tester/browser.js"></script>
 
-    <link rel="import" href="../juicy-ace-editor.html">
+    <script type="module" src="../juicy-ace-editor.js"></script>
 </head>
 
 <body>
@@ -20,19 +20,20 @@
         <template><juicy-ace-editor></juicy-ace-editor></template>
     </test-fixture>
 </body>
-<script>
-    var juicyElement;
-    describe('juicy-ace-editor', function() {
+<script type="module">
+import '../juicy-ace-editor.js';
+var juicyElement;
+describe('juicy-ace-editor', function() {
 
-        beforeEach(function() {
-            juicyElement = fixture('element');
-        });
-
-        it('should be upgraded element', function() {
-            expect(juicyElement).to.be.an.instanceOf(HTMLElement);
-            expect(juicyElement).to.be.not.an.instanceOf(HTMLUnknownElement);
-        });
+    beforeEach(function() {
+        juicyElement = fixture('element');
     });
+
+    it('should be upgraded element', function() {
+        expect(juicyElement).to.be.an.instanceOf(HTMLElement);
+        expect(juicyElement).to.be.not.an.instanceOf(HTMLUnknownElement);
+    });
+});
 </script>
 
 </html>
